@@ -1,0 +1,15 @@
+<h1>Add A New Book to the Library</h1>
+
+
+<%= form_for(@book) do |f| %>
+  <% #url: books_path, method: 'post' %>
+
+  <%= render(partial: 'form', locals: {f: f}) %>
+
+  <div>
+    <%= f.submit("Create Book") %>
+  </div>
+
+<% end %>  
+
+<%= link_to('Back to home', books_path)%>

@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Book.create(title: "The Fellowship of the Ring")
+Book.create(title: "Paradise Lost")
+Book.create(title: "The Hunger Games")
+Book.create(title: "1984")
+Book.create(title: "The Hobbit")

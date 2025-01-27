@@ -1,0 +1,15 @@
+<h1>Book Details</h1>
+
+<div>
+    <%= link_to('Edit', edit_book_path(@book)) %>
+    <%= link_to('Delete', delete_book_path(@book)) %>
+</div>
+
+<table>
+    <tr>
+        <th>Title:</th>
+        <td><%= @book.title %></td>
+    </tr>
+</table>
+
+<%= link_to("Back to home", books_path) %>
