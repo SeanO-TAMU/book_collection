@@ -12,4 +12,12 @@
 
 <% end %>  
 
+<div class="flash-messages">
+  <% flash.each do |key, message| %>
+    <div class="flash <%= key %>">
+      <%= message %>
+    </div>
+  <% end %>
+</div>
+
 <%= link_to('Back to home', books_path)%>

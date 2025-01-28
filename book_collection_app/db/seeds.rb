@@ -9,8 +9,10 @@
 #   end
 
 
-Book.create(title: "The Fellowship of the Ring")
-Book.create(title: "Paradise Lost")
-Book.create(title: "The Hunger Games")
-Book.create(title: "1984")
-Book.create(title: "The Hobbit")
+Book.create([
+  { title: 'The Catcher in the Rye', author: 'J.D. Salinger', price: 9.99, published_date: '1951-07-16' },
+  { title: 'To Kill a Mockingbird', author: 'Harper Lee', price: 14.99, published_date: '1960-07-11' },
+  { title: '1984', author: 'George Orwell', price: 12.99, published_date: '1949-06-08' },
+  { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', price: 10.99, published_date: '1925-04-10' },
+  { title: 'Pride and Prejudice', author: 'Jane Austen', price: 8.99, published_date: '1813-01-28' }
+])

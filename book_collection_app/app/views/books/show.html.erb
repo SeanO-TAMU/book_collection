@@ -10,6 +10,26 @@
         <th>Title:</th>
         <td><%= @book.title %></td>
     </tr>
+    <tr>
+        <th>Author:</th>
+        <td><%= @book.author %></td>
+    </tr>
+    <tr>
+        <th>Price:</th>
+        <td><%= @book.price %></td>
+    </tr>
+    <tr>
+        <th>Published Date:</th>
+        <td><%= @book.published_date %></td>
+    </tr>
 </table>
+
+<div class="flash-messages">
+  <% flash.each do |key, message| %>
+    <div class="flash <%= key %>">
+      <%= message %>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to("Back to home", books_path) %>
