@@ -20,6 +20,7 @@ class BooksController < ApplicationController
         else
             # the new action is not being called here, just re-rendering the view template again
             flash[:alert] = "Error with creating the book"
+            logger.debug @book.errors.full_messages
             render('new')
         end
     end
@@ -54,7 +55,10 @@ class BooksController < ApplicationController
 
     def book_params
         params.require(:book).permit(
-            :title
+            :title, 
+            :author, 
+            :price, 
+            :published_date
         )
     end
 
