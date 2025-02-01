@@ -1,5 +1,4 @@
 class BooksController < ApplicationController
-    
     def index
         @books = Book.all
     end
@@ -21,7 +20,7 @@ class BooksController < ApplicationController
             # the new action is not being called here, just re-rendering the view template again
             flash[:alert] = "Error with creating the book"
             logger.debug @book.errors.full_messages
-            render('new')
+            render("new")
         end
     end
 
@@ -36,7 +35,7 @@ class BooksController < ApplicationController
             redirect_to book_path(@book)
         else
             flash[:alert] = "Error with updating the book"
-            render('edit')
+            render("edit")
         end
     end
 
@@ -55,11 +54,10 @@ class BooksController < ApplicationController
 
     def book_params
         params.require(:book).permit(
-            :title, 
-            :author, 
-            :price, 
+            :title,
+            :author,
+            :price,
             :published_date
         )
     end
-
 end
